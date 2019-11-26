@@ -7,9 +7,9 @@ Installation: pip install pytube
 
 from pytube import YouTube
 from pyfiglet import Figlet  # Intro text
-from clint.textui import puts, colored, indent, progress
+from clint.textui import puts, colored, indent, progress  # Colored text
 from clint.arguments import Args
-from terminaltables import SingleTable
+from terminaltables import SingleTable  # Table view
 
 global MaxFileSize, fileSizeInBytes
 
@@ -27,6 +27,7 @@ def progress(stream=None, chunk=None, file_handle=None, remaining=None):
     print("\r{:00.0f}% downloaded".format(percent), end='')
 
 
+# creating object of class YouTube @param video link @param download progress status
 youtube = YouTube(link, on_progress_callback=progress)
 
 print(colored.yellow("\tSELECT THE FORMAT TO DOWNLOAD"))
@@ -41,6 +42,7 @@ print(colored.cyan(table.table))
 
 downloadType = input(colored.green('Enter format id: '))
 print()
+# checking if the input entered is int
 try:
     val = int(downloadType)
     if val == 1:
