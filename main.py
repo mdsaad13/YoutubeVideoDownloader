@@ -20,9 +20,6 @@ print(inroText)
 link = input(colored.green('Enter link to download: '))
 print()
 
-# link = 'https://www.youtube.com/watch?v=87Gx3U0BDlo'
-# youtube = YouTube(link)
-
 
 def progress(stream=None, chunk=None, file_handle=None, remaining=None):
     # Gets the percentage of the file that has been downloaded.
@@ -35,7 +32,7 @@ youtube = YouTube(link, on_progress_callback=progress)
 print(colored.yellow("\tSELECT THE FORMAT TO DOWNLOAD"))
 table_data = [
     ['Format ID', 'VIDEO', '', 'Format ID', 'AUDIO'],
-    ['1', '720p', ' ', '4', '128kbps'],
+    ['1', '1080p', ' ', '4', '128kbps'],
     ['2', '720p', ' ', '5', '70kbps'],
     ['3', '480p', ' ', '6', '50kbps']
 ]
@@ -70,3 +67,5 @@ MB = str(MaxFileSize) + " MB"
 print(colored.yellow("File Size = {:00.00f} MB".format(MaxFileSize)))
 
 selectedVideo.download()
+
+print(colored.green('\rVIDEO DOWNLOADED!!'))
