@@ -2,7 +2,12 @@
 YouTube video or audio downloader using command line input
 -by Mohammed Saad
 Credits: https://pypi.org/project/pytube/
-Installation: pip install pytube
+
+Installations: 
+
+pip install pytube
+pip install clint
+pip install terminaltables
 '''
 
 from pytube import YouTube
