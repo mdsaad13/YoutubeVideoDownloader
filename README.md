@@ -1,4 +1,4 @@
-# YoutubeVideoDownloader
+# Youtube Video Downloader
 - Download youtube videos in video or audio format (Python CLI)
     - [main.py](main.py)
 - Download complete playlist 
